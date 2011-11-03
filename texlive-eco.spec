@@ -1,3 +1,9 @@
+# revision 15878
+# category Package
+# catalog-ctan /fonts/eco
+# catalog-date 2007-09-25 20:45:33 +0200
+# catalog-license gpl
+# catalog-version 1.3
 Name:		texlive-eco
 Version:	1.3
 Release:	1
@@ -555,6 +561,7 @@ font families as well, e.g., PostScript fonts, try altfont.
 %doc %{_texmfdistdir}/source/fonts/eco/ecoss.tex
 %doc %{_texmfdistdir}/source/fonts/eco/ecott.tex
 %doc %{_texmfdistdir}/source/fonts/eco/ecovt.tex
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -565,3 +572,5 @@ font families as well, e.g., PostScript fonts, try altfont.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar fonts tex doc source %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}

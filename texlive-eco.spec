@@ -18,9 +18,6 @@ BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
 Requires(post):	texlive-kpathsea
-Conflicts:	texlive-texmf <= 20110705-3
-Conflicts:	texlive-doc <= 20110705-3
-Conflicts:	texlive-source <= 20110705-3
 
 %description
 A set of font metric files and virtual fonts for using the EC
@@ -29,20 +26,12 @@ together with the standard ec fonts. The style file eco.sty is
 sufficient to use the eco fonts but if you intend to use other
 font families as well, e.g., PostScript fonts, try altfont.
 
-%pre
-    %_texmf_mktexlsr_pre
-
 %post
-    %_texmf_mktexlsr_post
-
-%preun
-    if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_pre
-    fi
+    %{_sbindir}/texlive.post
 
 %postun
     if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_post
+	%{_sbindir}/texlive.post
     fi
 
 #-----------------------------------------------------------------------
@@ -562,7 +551,6 @@ font families as well, e.g., PostScript fonts, try altfont.
 %doc %{_texmfdistdir}/source/fonts/eco/ecoss.tex
 %doc %{_texmfdistdir}/source/fonts/eco/ecott.tex
 %doc %{_texmfdistdir}/source/fonts/eco/ecovt.tex
-%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -573,5 +561,3 @@ font families as well, e.g., PostScript fonts, try altfont.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar fonts tex doc source %{buildroot}%{_texmfdistdir}
-mkdir -p %{buildroot}%{_tlpkgobjdir}
-cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}

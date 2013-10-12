@@ -1,12 +1,12 @@
-# revision 15878
+# revision 29349
 # category Package
 # catalog-ctan /fonts/eco
-# catalog-date 2007-09-25 20:45:33 +0200
+# catalog-date 2012-07-10 21:25:56 +0200
 # catalog-license gpl
 # catalog-version 1.3
 Name:		texlive-eco
 Version:	1.3
-Release:	2
+Release:	3
 Summary:	Oldstyle numerals using EC fonts
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/eco
@@ -561,17 +561,3 @@ font families as well, e.g., PostScript fonts, try altfont.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar fonts tex doc source %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.3-2
-+ Revision: 751320
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 1.3-1
-+ Revision: 718302
-- texlive-eco
-- texlive-eco
-- texlive-eco
-- texlive-eco
-

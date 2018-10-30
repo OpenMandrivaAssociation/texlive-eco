@@ -6,7 +6,7 @@
 # catalog-version 1.3
 Name:		texlive-eco
 Version:	1.3
-Release:	11
+Release:	12
 Summary:	Oldstyle numerals using EC fonts
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/eco

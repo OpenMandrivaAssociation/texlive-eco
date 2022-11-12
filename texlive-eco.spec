@@ -1,19 +1,13 @@
-# revision 29349
-# category Package
-# catalog-ctan /fonts/eco
-# catalog-date 2012-07-10 21:25:56 +0200
-# catalog-license gpl
-# catalog-version 1.3
 Name:		texlive-eco
-Version:	1.3
-Release:	12
+Version:	29349
+Release:	1
 Summary:	Oldstyle numerals using EC fonts
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/eco
 License:	GPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/eco.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/eco.doc.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/eco.source.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/eco.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/eco.doc.r%{version}.tar.xz
+Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/eco.source.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -27,12 +21,12 @@ sufficient to use the eco fonts but if you intend to use other
 font families as well, e.g., PostScript fonts, try altfont.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -554,7 +548,8 @@ font families as well, e.g., PostScript fonts, try altfont.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1 -a2
+%setup -c -a1 -a2
+%autopatch -p1
 
 %build
 

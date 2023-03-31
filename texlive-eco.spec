@@ -1,6 +1,6 @@
 Name:		texlive-eco
 Version:	29349
-Release:	1
+Release:	2
 Summary:	Oldstyle numerals using EC fonts
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/eco

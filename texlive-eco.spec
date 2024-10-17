@@ -3,7 +3,7 @@ Version:	29349
 Release:	2
 Summary:	Oldstyle numerals using EC fonts
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/fonts/eco
+URL:		https://www.ctan.org/tex-archive/fonts/eco
 License:	GPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/eco.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/eco.doc.r%{version}.tar.xz
